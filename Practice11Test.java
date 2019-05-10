@@ -117,6 +117,8 @@ public class Practice11Test {
 
 		    start = System.currentTimeMillis();
 		    while ((text = reader.readLine()) != null) {
+				//System.out.println(text + "\t>Slot: " + hashtable.getSlot(text) + "\t>Size: " + hashtable.size() + "\t>Bucket: " + hashtable.bucketSize() + "\t>Load: " + hashtable.loadFactor() );
+				//Thread.sleep(2000);
 		    	hashtable.put(text, text);
 		    	if (random.nextFloat() < 0.0002) {
 		    		lookingFor.add(text);
@@ -132,6 +134,7 @@ public class Practice11Test {
 		    end = System.currentTimeMillis();
 		} catch (Exception e) {
 			System.out.println("Unable to conduct timing test.");
+			//System.out.println(e.getMessage());
 			success = false;
 		}
 		
